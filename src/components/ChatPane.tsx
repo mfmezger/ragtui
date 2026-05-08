@@ -11,7 +11,7 @@ export function ChatPane({ messages, busy, warning }: ChatPaneProps) {
   return (
     <box title="Chat" borderStyle="rounded" style={{ border: true, flexGrow: 1, flexShrink: 1, padding: 1, flexDirection: "column" }}>
       {warning === null ? null : <text fg="#e0af68">⚠ {warning}</text>}
-      <scrollbox style={{ flexGrow: 1 }}>
+      <scrollbox stickyScroll stickyStart="bottom" style={{ flexGrow: 1 }}>
         {messages.length === 0 ? (
           <box style={{ flexDirection: "column" }}>
             <text fg="#a9b1d6">Ask a question about your indexed sources.</text>
